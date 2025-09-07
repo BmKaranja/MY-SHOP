@@ -1,10 +1,10 @@
 body{
-        background:linear-gradient(to bottom, rgb(86, 83, 83), whitesmoke);        
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-        padding: 0;
+    background:linear-gradient(to bottom, rgb(86, 83, 83), whitesmoke);        
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 .c-1{
     background-color: whitesmoke;
@@ -37,6 +37,8 @@ body{
     cursor: pointer;
 }
 .links{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
     background-color: whitesmoke;
     text-align: right;
 }
@@ -53,7 +55,7 @@ body{
     border-radius: 50%;
     margin: 20px;
 }
-@media screen  and (max-width: 600px) {
+@media screen  and (max-width: 800px) {
     #Img-1{
         width: 40vw;
     }
@@ -91,4 +93,46 @@ body{
     margin-left: 2vw;
     height: 5vh;
     width: 23%;   
+}
+.p-3{
+    text-decoration: underline;
+    margin-top: 5vh;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}.P-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3vw;
+    margin-top: 3vh;
+    justify-items: center;
+    padding: 0 5vw;
+}
+.items a{
+    text-decoration: none;
+}
+.items img{
+    position: relative;
+    left: 6vw;
+    top: -8vh;
+}
+.items p{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.items{
+    margin-top: 8vh;
+    background-color:#3b3b3b;
+    height: 28vh;
+    width: 20vw;
+    border-radius: 21px;
+}
+.items:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
