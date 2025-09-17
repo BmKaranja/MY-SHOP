@@ -213,3 +213,27 @@ body{
         display: none;
     }
 }
+.forms{
+    display: flex;
+    gap: 2vh;
+    height: 80vh;
+    width: 2fr;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    align-items: center;
+    margin-top: 7vh;
+    text-align: center;
+    background-color: whitesmoke;
+}
+.login-image{
+    height: 80vh;
+    float: left;
+    position: cover;
+    width: 50%;
+}
+.form{
+    padding-left: 5vw;
+}
+.back-link{
+    margin-left: -5vw;   
+}
