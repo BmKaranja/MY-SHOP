@@ -1,5 +1,5 @@
 body{
-    background:linear-gradient(to bottom, rgb(86, 83, 83), whitesmoke);        
+    background-color: lightgray;        
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
@@ -236,4 +236,34 @@ body{
 }
 .back-link{
     margin-left: -5vw;   
+}
+
+.AD{
+    background-color: whitesmoke;
+    margin-top: -2vh;
+    display: grid;
+    grid-template-columns: 1fr 0fr;
+    height: 70vh;
+}
+#AD-con{
+    padding-left: 6vw;
+    padding-top: 20vh;
+    text-align: center;
+}
+.AD-img{
+    height: 70%;
+    padding-top: 7vh;
+    padding-right: 6vw;
+}
+#btn-3{
+    background-color: black;
+    color: white;
+    height: 5vh;
+    width: 10vw;
+    font-weight: bold;
+}
+#btn-3:hover{
+    background-color: #4c525c;
+    cursor: pointer;
+    transform: scale(1.05);
 }
