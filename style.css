@@ -295,7 +295,7 @@ body{
     margin: 2vh 4vw 2vh 2vw;
 }
 .p-l-a{
-    padding-left: 6vw;
+    padding:0 2vw;
 }
 .product-list{
     display: grid;
@@ -306,6 +306,5 @@ body{
 }
 .product-item{
     padding-top: 5vh;
-    display: flex;
-    align-items: center;
+    text-align: center;
 }
