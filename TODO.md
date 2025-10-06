@@ -1,0 +1,2 @@
+- [ ] Add .outdoor-travel CSS class to style.css for outdoor and travel product items with green background and hover effects.
+- [ ] Add outdoor and travel product section to Products.html with sample products using the new class.

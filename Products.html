@@ -13,7 +13,8 @@
             <a href="index.html"class="t-links">Home</a>
             <a href="Products.html"class="t-links">Products</a>
             <a href="contactus.html"class="t-links">Contact Us</a>
-            <a href="login.html"class="t-links"style="padding-right:4vw;">Login</a>
+            <a href="login.html"class="t-links">Login</a>
+            <a href="cart.html" class="t-links">Cart (<span id="cart-count">0</span>)</a>
         </nav>
     </header>
     <section class="AD">
@@ -33,218 +34,176 @@
         <aside class="p-links">
             <table border="1">
                 <tr style="padding-top: 16px;">
-                    <td><a href="#" class="p-l-a">All Products</a></td>
+                    <td><a href="#product-1" class="p-l-a">Tech & Accessories</a></td>
                 </tr>
                 <tr style="padding-top: 16px;">
-                    <td><a href="#" class="p-l-a">Tech & Accessories</a></td>
+                    <td><a href="#product-4" class="p-l-a">Fashion & Apparel</a></td>
                 </tr>
                 <tr style="padding-top: 16px;">
-                    <td><a href="#" class="p-l-a">Fashion & Apparell</a></td>
+                    <td><a href="#product-7" class="p-l-a">Food</a></td>
                 </tr>
                 <tr style="padding-top: 16px;">
-                    <td><a href="#" class="p-l-a">Food</a></td>
-                </tr>
-                <tr style="padding-top: 16px;">
-                    <td><a href="#" class="p-l-a">Beauty & Wellness</a></td>
+                    <td><a href="#product-10" class="p-l-a">Beauty & Wellness</a></td>
                 </tr>
                 <tr  style="padding-top: 16px;"></tr>
-                    <td><a href="#" class="p-l-a">Home & Living</a></td>
+                    <td><a href="#product-11" class="p-l-a">Home & Living</a></td>
                 </tr>
                 <tr style="padding-top: 16px;"></tr>
-                    <td><a href="#" class="p-l-a">Kitchen & Dining</a></td>
+                    <td><a href="#product-13" class="p-l-a">Tech & Accessories</a></td>
                 </tr>
                 <tr style="padding-top: 16px;"></tr>
-                    <td><a href="#" class="p-l-a">Stationery & Office</a></td>
+                    <td><a href="#product-16" class="p-l-a">Fashion & Apparel</a></td>
                 </tr>
                 <tr style="padding-top: 16vh;"></tr>
-                    <td><a href="#" class="p-l-a">Outdoor & Travel</a></td>
+                    <td><a href="#product-22" class="p-l-a">Outdoor & Travel</a></td>
                 </tr>
             </table>
         </aside>
         <article class="products">
             <h1 style="text-align: center;">Our Products</h1>
             <div class="product-list">
-                <div class="product-item">
-                    <img src="" alt="Samsung Galaxy S22 Ultra">
+                <div class="product-item outdoor-travel" id="product-1">
+                    <img src="Galaxy S23 Ultra Skins - schwarzes Camo.jpeg">
                     <h3>Smartphone - Samsung Galaxy S22 Ultra</h3>
                     <p>$999.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Smartphone - Samsung Galaxy S22 Ultra', '$999.99', 'Galaxy S23 Ultra Skins - schwarzes Camo.jpeg')">Add to Cart</button>
                 </div>
-                <div class="product-item">
-                    <img src="iPhone_13_Pro_Max-removebg-preview.png" alt="iPhone 13 Pro Max">
+                <div class="product-item outdoor-travel" id="product-2">
+                    <img src="8775f45d-f153-48b2-9181-b317d6ce2ee1.jpeg" alt="iPhone 13 Pro Max">
                     <h3>Smartphone - iPhone 13 Pro Max</h3>
                     <p>$1099.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Smartphone - iPhone 13 Pro Max', '$1099.99', '8775f45d-f153-48b2-9181-b317d6ce2ee1.jpeg')">Add to Cart</button>
                 </div>
-                <div class="product-item">
-                    <img src="Google_Pixel_6_Pro-removebg-preview.png" alt="Google Pixel 6 Pro">
+                <div class="product-item outdoor-travel" id="product-3">
+                    <img src="Draco - Google Pixel 6a Case.jpeg" alt="Google Pixel 6 Pro">
                     <h3>Smartphone - Google Pixel 6 Pro</h3>
                     <p>$899.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Smartphone - Google Pixel 6 Pro', '$899.99', 'Draco - Google Pixel 6a Case.jpeg')">Add to Cart</button>
                 </div>
             </div>
             <div class="product-list">
-                <div class="product-item">
-                    <img src="" alt="Leather Jacket">
+                <div class="product-item" id="product-4">
+                    <img src="Men’s Brando Style - Negan Jacket Slim Fit Motorcycle Black Biker Leather Jacket.jpeg" alt="Leather Jacket">
                     <h3>Fashion - Leather Jacket</h3>
                     <p>$199.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Fashion - Leather Jacket', '$199.99', 'Men’s Brando Style - Negan Jacket Slim Fit Motorcycle Black Biker Leather Jacket.jpeg')">Add to Cart</button>
                 </div>
-                <div class="product-item">
-                    <img src="" alt="Running Shoes">
+                <div class="product-item" id="product-5">
+                    <img src="9d3e7acf-c5af-407a-ad4e-73734da992f6.jpeg" alt="Running Shoes">
                     <h3>Fashion - Running Shoes</h3>
                     <p>$129.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Fashion - Running Shoes', '$129.99', '9d3e7acf-c5af-407a-ad4e-73734da992f6.jpeg')">Add to Cart</button>
                 </div>
-                <div class="product-item">
-                    <img src="" alt="Designer Handbag">
+                <div class="product-item" id="product-6">
+                    <img src="Women's Bags _ PRADA.jpeg" alt="Designer Handbag">
                     <h3>Fashion - Designer Handbag</h3>
                     <p>$299.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Fashion - Designer Handbag', '$299.99', 'Women\'s Bags _ PRADA.jpeg')">Add to Cart</button>
                 </div>
             </div>
             <div class="product-list">
-                <div class="product-item">
-                    <img src="" alt="Organic Coffee Beans">
-                    <h3>Food - Organic Coffee Beans</h3>
-                    <p>$19.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product-item">
-                    <img src="" alt="Gourmet Chocolate Box">
-                    <h3>Food - Gourmet Chocolate Box</h3>
-                    <p>$24.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product-item">
-                    <img src="" alt="Artisan Bread">
-                    <h3>Food - Artisan Bread</h3>
-                    <p>$9.99</p>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-list">
-                <div class="product-item">
-                    <img src="" alt="Skincare Set">
+                <div class="product-item" id="product-10">
+                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400" alt="Skincare Set">
                     <h3>Beauty - Skincare Set</h3>
                     <p>$49.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Beauty - Skincare Set', '$49.99', 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400')">Add to Cart</button>
                 </div>
-                <div class="product-item">
-                    <img src="" alt="Cozy Blanket">
+                <div class="product-item" id="product-11">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400" alt="Cozy Blanket">
                     <h3>Home & Living - Cozy Blanket</h3>
                     <p>$39.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Home & Living - Cozy Blanket', '$39.99', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400')">Add to Cart</button>
                 </div>
-                <div class="product-item">
-                    <img src="" alt="Decorative Vase">
+                <div class="product-item" id="product-12">
+                    <img src="Metal Vase with Single Flower Gold Accent.jpeg" alt="Decorative Vase">
                     <h3>Home & Living - Decorative Vase</h3>
                     <p>$29.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Home & Living - Decorative Vase', '$29.99', 'Metal Vase with Single Flower Gold Accent.jpeg')">Add to Cart</button>
                 </div>
             </div>
             <div class="product-list">
-                <div class="product-item">
-                    <img src="" alt="Samsung Galaxy S22 Ultra">
-                    <h3>Samsung Galaxy S22 Ultra</h3>
-                    <p>$999.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product-item">
-                    <img src="iPhone_13_Pro_Max-removebg-preview.png" alt="iPhone 13 Pro Max">
-                    <h3>iPhone 13 Pro Max</h3>
-                    <p>$1099.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product-item">
-                    <img src="Google_Pixel_6_Pro-removebg-preview.png" alt="Google Pixel 6 Pro">
-                    <h3>Google Pixel 6 Pro</h3>
-                    <p>$899.99</p>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-list">
-                <div class="product-item">
-                    <img src="" alt="Samsung Galaxy S22 Ultra">
-                    <h3>Samsung Galaxy S22 Ultra</h3>
-                    <p>$999.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product-item">
-                    <img src="iPhone_13_Pro_Max-removebg-preview.png" alt="iPhone 13 Pro Max">
-                    <h3>iPhone 13 Pro Max</h3>
-                    <p>$1099.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product-item">
-                    <img src="Google_Pixel_6_Pro-removebg-preview.png" alt="Google Pixel 6 Pro">
-                    <h3>Google Pixel 6 Pro</h3>
-                    <p>$899.99</p>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-list">
-                <div class="product-item">
-                    <img src="" alt="Smartwatch">
+                <div class="product-item" id="product-13">
+                    <img src="bb13b1f1-50a6-4e6a-902d-8c4d070cd8b8.jpeg" alt="Smartwatch">
                     <h3>Tech & Accessories - Smartwatch</h3>
                     <p>$199.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Tech & Accessories - Smartwatch', '$199.99', 'bb13b1f1-50a6-4e6a-902d-8c4d070cd8b8.jpeg')">Add to Cart</button>
                 </div>
-                <div class="product-item">
-                    <img src="" alt="Wireless Earbuds">
+                <div class="product-item" id="product-14">
+                    <img src="earbuds.jpeg" alt="Wireless Earbuds">
                     <h3>Tech & Accessories - Wireless Earbuds</h3>
                     <p>$129.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Tech & Accessories - Wireless Earbuds', '$129.99', 'earbuds.jpeg')">Add to Cart</button>
                 </div>
-                <div class="product-item">
-                    <img src="" alt="Gaming Laptop">
+                <div class="product-item" id="product-15">
+                    <img src="DELL 7547 Inspiron 15 Inch High-End Laptop User Guide.jpeg" alt="Gaming Laptop">
                     <h3>Tech & Accessories - Gaming Laptop</h3>
                     <p>$1499.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Tech & Accessories - Gaming Laptop', '$1499.99', 'DELL 7547 Inspiron 15 Inch High-End Laptop User Guide.jpeg')">Add to Cart</button>
                 </div>
             </div>
             <div class="product-list">
-                <div class="product-item">
-                    <img src="" alt="Casual T-Shirt">
+                <div class="product-item" id="product-16">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400" alt="Casual T-Shirt">
                     <h3>Fashion & Apparel - Casual T-Shirt</h3>
                     <p>$19.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Fashion & Apparel - Casual T-Shirt', '$19.99', 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400')">Add to Cart</button>
                 </div>
-                <div class="product-item">
-                    <img src="" alt="Jeans">
+                <div class="product-item" id="product-17">
+                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400" alt="Jeans">
                     <h3>Fashion & Apparel - Jeans</h3>
                     <p>$49.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Fashion & Apparel - Jeans', '$49.99', 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=400')">Add to Cart</button>
                 </div>
-                <div class="product-item">
-                    <img src="" alt="Sneakers">
+                <div class="product-item" id="product-18">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400" alt="Sneakers">
                     <h3>Fashion & Apparel - Sneakers</h3>
                     <p>$79.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Fashion & Apparel - Sneakers', '$79.99', 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400')">Add to Cart</button>
                 </div>
             </div>
             <div class="product-list">
-                <div class="product-item">
-                    <img src="" alt="Organic Honey">
+                <div class="product-item" id="product-19">
+                    <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400" alt="Organic Honey">
                     <h3>Food - Organic Honey</h3>
                     <p>$14.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Food - Organic Honey', '$14.99', 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400')">Add to Cart</button>
                 </div>
-                <div class="product-item">
-                    <img src="" alt="Premium Olive Oil">
+                <div class="product-item" id="product-20">
+                    <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400" alt="Premium Olive Oil">
                     <h3>Food - Premium Olive Oil</h3>
                     <p>$24.99</p>
-                    <button>Add to Cart</button>
-                </div> 
-                <div class="product-item">
-                    <img src="" alt="Gourmet Cheese">
+                    <button onclick="addToCart('Food - Premium Olive Oil', '$24.99', 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400')">Add to Cart</button>
+                </div>
+                <div class="product-item" id="product-21">
+                    <img src="6e4025f8-8b41-4268-959a-5b863c0c6990.jpeg" alt="Gourmet Cheese">
                     <h3>Food - Gourmet Cheese</h3>
                     <p>$29.99</p>
-                    <button>Add to Cart</button>
+                    <button onclick="addToCart('Food - Gourmet Cheese', '$29.99', '6e4025f8-8b41-4268-959a-5b863c0c6990.jpeg')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-list">
+                <div class="product-item outdoor-travel" id="product-22">
+                    <img src="outdoor.png" alt="Camping Tent">
+                    <h3>Outdoor & Travel - Camping Tent</h3>
+                    <p>$149.99</p>
+                    <button onclick="addToCart('Outdoor & Travel - Camping Tent', '$149.99', 'outdoor.png')">Add to Cart</button>
+                </div>
+                <div class="product-item outdoor-travel" id="product-23">
+                    <img src="Portable Tent One Touch Outdoor Tent Fully….jpeg" alt="Travel Backpack">
+                    <h3>Outdoor & Travel - Travel Backpack</h3>
+                    <p>$89.99</p>
+                    <button onclick="addToCart('Outdoor & Travel - Travel Backpack', '$89.99', 'Portable Tent One Touch Outdoor Tent Fully….jpeg')">Add to Cart</button>
+                </div>
+                <div class="product-item outdoor-travel" id="product-24">
+                    <img src="Mens Outdoor Hiking Boots Desert Combat Tactical Boots Male Winter Shoes Men Desert Ankle Boots Work.jpeg" alt="Hiking Boots">
+                    <h3>Outdoor & Travel - Hiking Boots</h3>
+                    <p>$129.99</p>
+                    <button onclick="addToCart('Outdoor & Travel - Hiking Boots', '$129.99', 'Mens Outdoor Hiking Boots Desert Combat Tactical Boots Male Winter Shoes Men Desert Ankle Boots Work.jpeg')">Add to Cart</button>
                 </div>
             </div>
         </article>
     </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

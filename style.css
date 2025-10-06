@@ -203,6 +203,7 @@ body{
 .footer{
     background-color: rgb(61, 58, 58);
     color: white;
+    margin-top: 5vh;
 }
 .quality{
     text-align: center;
@@ -284,11 +285,29 @@ body{
     flex-direction: row;
 }
 .p-links{
-    margin-top:12vh ;
+    margin-top:20vh ;
     margin-left: 2vw;
     border: none;
     flex: 1;
-
+}
+.p-links table{
+    border-collapse: collapse;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.p-links td{
+    border: none;
+    padding: 10px;
+}
+.p-links a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.p-links a:hover{
+    color: #4CAF50;
 }
 .products{
     flex: 3;
@@ -307,4 +326,25 @@ body{
 .product-item{
     padding-top: 5vh;
     text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #3b3b3b; /* Green background for outdoor theme */
+    color: white;
+    transition: transform 0.3s ease;
+}
+.product-item img{
+    position: relative;
+    height: 30vh;
+}
+
+/* Resize cart item images */
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+.product-item:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
