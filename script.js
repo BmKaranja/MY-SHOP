@@ -1,12 +1,46 @@
 // Cart functionality
 let cart = [];
+let user = [];
+let loggedin =null
 
 // Load cart from localStorage on page load
 document.addEventListener('DOMContentLoaded', function() {
     loadCart();
     updateCartCount();
-});
-
+    userstatus();
+});const Lstatus = document.getElementById('status')
+const nav = document.querySelector('.links')
+const reset =document.getElementById('reset')
+function userstatus(){
+    let userdata =JSON.parse(sessionStorage.getItem(userstatus))
+    if(userdata== null || userdata==false){
+        console.log('Failed')
+        Lstatus.textContent='Login'
+    }
+    else{
+        console.log(userdata)
+        Lstatus.innerHTML='LoggedIn'
+        Lstatus.style.color=' rgb(61, 58, 58)'
+    }
+}
+reset.addEventListener('click',()=>{
+    sessionStorage.removeItem(userstatus)
+})
+const login =document.getElementById('loginbtn')
+login.addEventListener('click',() =>{
+    const username= document.getElementById('username').value.trim();
+    const pass  = document.getElementById('password').value.trim();
+    if (username!==''|| username===null && pass !=='' || pass===null){
+        loggedin=true
+        user.push({
+            username :username,
+            password : pass
+        })
+        sessionStorage.setItem(userstatus, JSON.stringify(loggedin))
+    }else{
+        console.log('Error')
+    }
+})
 // Add item to cart
 function addToCart(productName, price, imageSrc) {
     const existingItem = cart.find(item => item.name === productName);
