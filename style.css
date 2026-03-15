@@ -8,6 +8,23 @@ body{
     display: flex;
     flex-direction: column;
 }
+.cart{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: white;
+    margin-top: 5vh;
+    width: 60vw;
+    margin-left: 15rem;
+    border-radius: 20px;
+}
+.cartimg{
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    background-image: url('cart-removebg-preview.png');
+}
 html{
     scroll-behavior: smooth;
 }

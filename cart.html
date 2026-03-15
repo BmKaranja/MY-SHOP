@@ -13,20 +13,24 @@
             <a href="index.html" class="t-links">Home</a>
             <a href="Products.html" class="t-links">Products</a>
             <a href="contactus.html" class="t-links">Contact Us</a>
-            <a href="cart.html" class="t-links">Cart (<span id="cart-count">0</span>)</a>
-            <a href="login.html" class="t-links">Login</a>
+            <a href="login.html" class="t-links" id="status">Login</a>
+            <a href="cart.html" class="t-links"  style="padding-right:4vw;">Cart (<span id="cart-count">0</span>)</a>
         </nav>
     </header>
-    <main style="width:90%; margin: auto; padding: 20px; background-color:lightgray;text-align: center;">
-        <section class="cart-container">
+    <section class="cart">
+        <article class="cartimg">
+        </article>
+        <article style="width:50%;text-align: center;">
+        <div class="cart-container">
             <h1>Your Shopping Cart</h1>
             <div id="cart-items"></div>
             <div class="cart-total">
                 <h2>Total: <span id="total-price">$0.00</span></h2>
             </div>
             <button id="checkout-btn" onclick="checkout()">Checkout</button>
-        </section>
-    </main>
+        </div>
+    </article>
+    </section>
     <script src="script.js"></script>
     <script>
         // Display cart items on page load

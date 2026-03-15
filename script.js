@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     loadCart();
     updateCartCount();
     userstatus();
-});const Lstatus = document.getElementById('status')
+});
+const Lstatus = document.getElementById('status')
 const nav = document.querySelector('.links')
 const reset =document.getElementById('reset')
 function userstatus(){
@@ -153,6 +154,7 @@ function checkout() {
     if (cart.length === 0) {
         alert('Your cart is empty!');
         return;
-    }
+    }else{
     alert('Checkout functionality would be implemented here. Total: $' + getTotalPrice().toFixed(2));
+}
 }
