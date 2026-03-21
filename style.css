@@ -368,3 +368,25 @@ html{
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+#loginbtn{
+    background-color: black;
+    color: white;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+#reset{
+    background-color: #3b3b3b;
+    color: white;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.mybtns{
+    display :flex;
+    flex-direction:row;
+    gap: 3vw;
+    justify-content: center;
+}

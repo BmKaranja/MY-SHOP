@@ -2,6 +2,7 @@
 let cart = [];
 let user = [];
 let loggedin =null
+const cartCountElement = document.getElementById('cart-count');
 
 // Load cart from localStorage on page load
 document.addEventListener('DOMContentLoaded', function() {
@@ -12,37 +13,47 @@ document.addEventListener('DOMContentLoaded', function() {
 const Lstatus = document.getElementById('status')
 const nav = document.querySelector('.links')
 const reset =document.getElementById('reset')
+const myform = document.querySelector('form');
 function userstatus(){
-    let userdata =JSON.parse(sessionStorage.getItem(userstatus))
+    let userdata =JSON.parse(sessionStorage.getItem('userstatus'))
     if(userdata== null || userdata==false){
-        console.log('Failed')
+        console.log('Not Logged in')
         Lstatus.textContent='Login'
     }
-    else{
+    else{   
         console.log(userdata)
         Lstatus.innerHTML='LoggedIn'
         Lstatus.style.color=' rgb(61, 58, 58)'
     }
 }
 reset.addEventListener('click',()=>{
-    sessionStorage.removeItem(userstatus)
+    sessionStorage.removeItem('userstatus')
+    userstatus()
 })
+
 const login =document.getElementById('loginbtn')
-login.addEventListener('click',() =>{
-    const username= document.getElementById('username').value.trim();
-    const pass  = document.getElementById('password').value.trim();
-    if (username!==''|| username===null && pass !=='' || pass===null){
-        loggedin=true
+login.addEventListener('click', (event) => {
+    event.preventDefault();
+    const username = document.getElementById('username').value.trim();
+    const pass = document.getElementById('password').value.trim();
+    if (username !== '' && pass !== '') {
+        loggedin = true;
         user.push({
-            username :username,
-            password : pass
-        })
-        sessionStorage.setItem(userstatus, JSON.stringify(loggedin))
-    }else{
-        console.log('Error')
+            username: username,
+            password: pass
+        });
+        sessionStorage.setItem('userstatus', JSON.stringify(loggedin));
+        // Redirect to index page
+        window.location.href = 'index.html';
+    } else {
+        console.log('Error');
+        const Erromes = document.createElement('p');
+        Erromes.textContent = 'Error: Incomplete fields';
+        Erromes.style.textAlign = 'center';
+        Erromes.style.color = 'red';
+        myform.insertAdjacentElement('afterend', Erromes);
     }
-})
-// Add item to cart
+});// Add item to cart
 function addToCart(productName, price, imageSrc) {
     const existingItem = cart.find(item => item.name === productName);
 
@@ -102,7 +113,6 @@ function loadCart() {
 
 // Update cart count in navigation
 function updateCartCount() {
-    const cartCountElement = document.getElementById('cart-count');
     if (cartCountElement) {
         const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
         console.log('Total items in cart:', totalItems);
@@ -155,6 +165,6 @@ function checkout() {
         alert('Your cart is empty!');
         return;
     }else{
-    alert('Checkout functionality would be implemented here. Total: $' + getTotalPrice().toFixed(2));
+    alert('Purchase successfull. Total: $' + getTotalPrice().toFixed(2));
 }
 }
