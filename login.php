@@ -12,7 +12,7 @@
         <img src="login-img.jpeg" alt="login-img"class="login-image">
         <div>
             <a href="index.html" class="back-link">← Back to Home</a>
-            <form action="submit_login" method="post" class="form">
+            <form action="login.php" method="post" class="form">
                 <h2 style="text-decoration: underline;">Welcome Back</h2>
                 <br>
                 <label for="username">Username:</label>
@@ -33,6 +33,9 @@
             </form>
         </div>
     </section>
+    <?php
+    
+    ?>
     <script src="script.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
     
 </head>
 <body >
-    <form class="c-form">
+    <form class="c-form" >
         <h1>
             Contact Us
         </h1>

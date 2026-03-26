@@ -9,13 +9,7 @@
 </head>
 <body>
     <header class="top">
-        <nav class="links" style="margin-top: 0%;">
-            <a href="index.html"class="t-links">Home</a>
-            <a href="Products.html"class="t-links">Products</a>
-            <a href="contactus.html"class="t-links">Contact Us</a>
-            <a href="login.html"class="t-links" id="status">Login</a>
-            <a href="cart.html" class="t-links" style="padding-right:4vw;">Cart (<span id="cart-count">0</span>)</a>
-        </nav>
+        <?php include 'navbar.php'; ?>
     </header>
     <section class="AD">
         <div id="AD-con">
