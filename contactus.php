@@ -1,3 +1,20 @@
+<?php
+$error = '';
+$success = '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = trim($_POST["name"]);
+    $email = trim($_POST["email"]);
+    $issue = trim($_POST["issue"]);
+    $message = trim($_POST["message"]);
+    if (empty($name) || empty($email) || empty($issue) || empty($message)) {
+        $error = "All fields are required.";
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = "Invalid email format.";
+    } else {
+        $success = "Thank you! Your message has been sent.";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,18 +23,23 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo for Tenga and T.png" type="image/x-icon">
-    
 </head>
 <body >
-    <form class="c-form" >
+    <?php if (!empty($error)): ?>
+        <p style="text-align: center; color: red;"><?php echo $error; ?></p>
+    <?php endif; ?>
+    <?php if (!empty($success)): ?>
+        <p style="text-align: center; color: green;"><?php echo $success; ?></p>
+    <?php endif; ?>
+    <form class="c-form" action="contactus.php" method="post">
         <h1>
             Contact Us
         </h1>
         <hr>
-        <label for="name"class="f-name">Name:</label>
+        <label for="name" class="f-name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
 
-        <label for="email"class="f-name">Email:</label>
+        <label for="email" class="f-name">Email:</label>
         <input type="email" id="email" name="email" required><br><br>
 
         <label for="issue" class="f-name">Issue:</label>
@@ -29,7 +51,7 @@
             <option value="other">Other</option>
         </select><br><br>
 
-        <label for="message"class="f-name">Message:</label><br>
+        <label for="message" class="f-name">Message:</label><br>
         <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
 
         <input type="submit" value="Submit">

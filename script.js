@@ -31,29 +31,7 @@ reset.addEventListener('click',()=>{
     userstatus()
 })
 
-const login =document.getElementById('loginbtn')
-login.addEventListener('click', (event) => {
-    event.preventDefault();
-    const username = document.getElementById('username').value.trim();
-    const pass = document.getElementById('password').value.trim();
-    if (username !== '' && pass !== '') {
-        loggedin = true;
-        user.push({
-            username: username,
-            password: pass
-        });
-        sessionStorage.setItem('userstatus', JSON.stringify(loggedin));
-        // Redirect to index page
-        window.location.href = 'index.html';
-    } else {
-        console.log('Error');
-        const Erromes = document.createElement('p');
-        Erromes.textContent = 'Error: Incomplete fields';
-        Erromes.style.textAlign = 'center';
-        Erromes.style.color = 'red';
-        myform.insertAdjacentElement('afterend', Erromes);
-    }
-});// Add item to cart
+
 function addToCart(productName, price, imageSrc) {
     const existingItem = cart.find(item => item.name === productName);
 

@@ -1,3 +1,18 @@
+<?php
+session_start();
+$error = '';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
+    if (empty($username) || empty($password)) {
+        $error = 'Error: Incomplete fields';
+    } else {
+        $_SESSION['userstatus'] = true;
+        header('Location: index.html');
+        exit;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +24,7 @@
 </head>
 <body>
     <section class="forms">
-        <img src="login-img.jpeg" alt="login-img"class="login-image">
+        <img src="login-img.jpeg" alt="login-img" class="login-image">
         <div>
             <a href="index.html" class="back-link">← Back to Home</a>
             <form action="login.php" method="post" class="form">
@@ -22,20 +37,19 @@
                 <input type="password" id="password" name="password" required>
                 <br><br>
                 <div class="mybtns">
-                <a href="index.html" id="loginbtn">
+                <button type="submit" id="loginbtn">
                     Login
-                </a>
+                </button>
                 <a href="index.html" id="reset">
                     Reset
                 </a>
                 </div>
-                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+                <?php if ($error): ?>
+                    <p style="text-align: center; color: red;"><?php echo $error; ?></p>
+                <?php endif; ?>
+                <p>Don't have an account? <a href="Signup.php">Sign Up</a></p>
             </form>
         </div>
     </section>
-    <?php
-    
-    ?>
-    <script src="script.js"></script>
 </body>
 </html>

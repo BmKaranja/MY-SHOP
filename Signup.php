@@ -1,3 +1,23 @@
+<?php
+session_start();
+$error = '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $firstname = trim($_POST["firstname"]);
+    $lastname = trim($_POST["lastname"]);
+    $username = trim($_POST["username"]);
+    $email = trim($_POST["email"]);
+    $password = trim($_POST["password"]);
+    if (empty($firstname) || empty($lastname) || empty($username) || empty($email) || empty($password)) {
+        $error = "All fields are required.";
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = "Invalid email format.";
+    } else {
+        $_SESSION['userstatus'] = true;
+        header("Location: index.html");
+        exit;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +29,12 @@
 </head>
 <body>
     <section class="forms">
-        <img src="signup.jpeg" alt="login-img"class="login-image">
+        <img src="signup.jpeg" alt="login-img" class="login-image">
         <div>
             <a href="index.html" class="back-link">← Back to Home</a>
+            <?php if (!empty($error)): ?>
+                <p style="text-align: center; color: red;"><?php echo $error; ?></p>
+            <?php endif; ?>
             <form action="Signup.php" method="post" class="signup-form">
                 <h2 style="text-decoration: underline;">Create Your Account</h2>
                 <br>
@@ -31,7 +54,7 @@
                 <input type="password" id="password" name="password" required>
                 <br><br>
                 <button type="submit">Sign Up</button>
-                <p>Already have an account? <a href="login.html">Login</a></p>
+                <p>Already have an account? <a href="login.php">Login</a></p>
             </form>
         </div>
     </section>
