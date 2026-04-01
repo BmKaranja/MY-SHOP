@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TODO: Replace JS validation with PHP validation
 
 ## Steps:
@@ -10,4 +11,19 @@
 - [x] Step 6: Mark complete and attempt_completion
 
 Current progress: All edits complete. Test and finish.
+=======
+# Task: Remove JS validation and add PHP validation
+
+## Steps:
+- [x] Step 1: Edit script.js to remove JS login validation
+
+Current progress: Completed Steps 1-2, proceeding to Step 3
+
+- [x] Step 2: Edit login.php to add PHP server-side validation and fix form submit
+- [x] Step 3: Edit Signup.php to add PHP server-side validation
+- [ ] Step 4: Edit contactus.php to add form action and PHP validation
+- [ ] Step 5: Test forms and complete task
+
+Current progress: Starting Step 1
+>>>>>>> e14bf2ae993b5074202b375809a92c4992eb40f2
 

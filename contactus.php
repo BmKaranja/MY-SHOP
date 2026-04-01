@@ -31,15 +31,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo for Tenga and T.png" type="image/x-icon">
 </head>
-<body>
-    <form class="c-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <h1>Contact Us</h1>
+<body >
+    <?php if (!empty($error)): ?>
+        <p style="text-align: center; color: red;"><?php echo $error; ?></p>
+    <?php endif; ?>
+    <?php if (!empty($success)): ?>
+        <p style="text-align: center; color: green;"><?php echo $success; ?></p>
+    <?php endif; ?>
+    <form class="c-form" action="contactus.php" method="post">
+        <h1>
+            Contact Us
+        </h1>
         <hr>
         <label for="name" class="f-name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
+        <input type="text" id="name" name="name" required><br><br>
 
         <label for="email" class="f-name">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
+        <input type="email" id="email" name="email" required><br><br>
 
         <label for="issue" class="f-name">Issue:</label>
         <select id="issue" name="issue">
@@ -51,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </select><br><br>
 
         <label for="message" class="f-name">Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
 
         <input type="submit" value="Submit">
         <br><br>

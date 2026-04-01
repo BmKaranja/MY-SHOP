@@ -42,9 +42,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="password" id="password" name="password">
                 <br><br>
                 <div class="mybtns">
-                    <button type="submit" id="loginbtn">Login</button>
-                    <a href="index.html" id="reset">Reset</a>
+                <button type="submit" id="loginbtn">
+                    Login
+                </button>
+                <a href="index.html" id="reset">
+                    Reset
+                </a>
                 </div>
+                <?php if ($error): ?>
+                    <p style="text-align: center; color: red;"><?php echo $error; ?></p>
+                <?php endif; ?>
                 <p>Don't have an account? <a href="Signup.php">Sign Up</a></p>
             </form>
             <?php if ($error): ?>
